@@ -1,5 +1,5 @@
 //Event listener to input (select movie theatre)
-
+//Miksei tämä näy kielissä?
 document.querySelector('input').addEventListener('input', function(event) {
     filterMovies(event.target.value);
 });
