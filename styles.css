@@ -90,7 +90,7 @@ img {
     padding-right: 15px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     #data, table {min-width: 100%
         ;}
     img {margin-left: 10px;}

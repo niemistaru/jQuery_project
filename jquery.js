@@ -1,5 +1,5 @@
 //Event listener to input (select movie theatre)
-//
+
 document.querySelector('input').addEventListener('input', function(event) {
     filterMovies(event.target.value);
 });
