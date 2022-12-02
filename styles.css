@@ -1,0 +1,97 @@
+body{
+    background-color: #F0F898;
+} 
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    padding-top: 30px;
+}
+#date {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#txt {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#movietheatre {
+    border-radius: 5px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+#data {
+    margin-top: 30px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+table {
+    background-color: #CFCCD6;
+    border-radius: 10px;
+    margin: 0 auto;
+    min-width: 700px;
+}
+
+img {
+    margin-left: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+#title {
+    padding-left: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+#genre {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    text-align: left;
+}
+#showdate {
+    margin-left: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 25px;
+}
+#time {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#auditorium {
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 15px;
+}
+#audName {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 500px) {
+    #data, table {min-width: 100%
+        ;}
+    img {margin-left: 10px;}
+}
