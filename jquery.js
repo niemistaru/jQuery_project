@@ -69,25 +69,6 @@ function filterMovies() {
 }
 
 //Fetch info using jQuery
-/*KOKEILIN TÄHÄN JA EI LÄHTENY, YRITÄN MUOKATA TOSTA ALTA IIN ETTÄ TOIMII
-    $.ajax({
-    type: "GET",
-    url: "https://www.finnkino.fi/xml/Schedule/?area=" + theatreID,
-    dataType: "xml",
-    success: xmlParser
-    });
-});
-
-function xmlParser(xml) {
-    $('#load').fadeOut();
-
-    $(xml).find("Show").each(function() {
-
-    })
-}
-
-*/
-
 //Function to fetch info from api and parsing it
 function getInfo() {
     if (theatreID != undefined) {
@@ -100,8 +81,9 @@ function getInfo() {
             var shows = $(data).find("Show");
      // If there's no movies in the selected theatre, alert user
             if (shows.length == 0) {
-                alert("Valitussa teatterissa " + theatreName + " ei mene tällä hetkellä elokuvia. Valitse jokin toinen.")
-                document.getElementById("movietheatre").value = "";
+                alert("Valitussa teatterissa " + theatreName + " ei mene tällä hetkellä elokuvia. Valitse jokin toinen.");
+                $("#movietheatre").val("");
+                
             } else {   
                 for (i = 0; i < shows.length; i++) {
                     var image = "<img id='moviePic' src='" + $(shows[i]).find("EventSmallImagePortrait")[0].childNodes[0].nodeValue + "'></img>";
@@ -113,24 +95,13 @@ function getInfo() {
                     "<td id='auditorium'>" + $(shows[i]).find("Theatre")[0].childNodes[0].nodeValue + "<br><p id='audName'>" + $(shows[i]).find("TheatreAuditorium")[0].childNodes[0].nodeValue + 
                     "</p></td></tr>";
                 }
-    table1 += "</tbody></table>";
-    $("#data").html(table1);
-    $("#data").fadeIn(700);
-    $("#movietheatre").value = "";
+        table1 += "</tbody></table>";
+        $("#data").html(table1);
+    //TÄÄ ON SE JOKA TOIMII    $("#data").fadeIn(800);
+        $("#data").slideDown(1500);
 
             }
+            $("#movietheatre").val("");
     });
     }
 }
-
-/*NÄÄ ON TÄTÄ VANHAA MUOTOA, tällä ensin haettiin, parsiminen oli erikseen
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                filterInfo(this);
-            }
-        }
-        xmlhttp.open("GET", url, true);
-        xmlhttp.send();
-
-        */
