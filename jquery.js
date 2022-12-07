@@ -1,6 +1,4 @@
 //Event listener using jQuery (select movie theatre)
-// tää tuli jostain, miksi? const { data } = require("jquery");
-
 $("#movietheatre").on('input', function() {
     var val = this.value;
     if ($('#theatres option').filter(function() {
@@ -68,8 +66,7 @@ function filterMovies() {
     getInfo();
 }
 
-//Fetch info using jQuery
-//Function to fetch info from api and parsing it
+//Fetch info from api using jQuery and parse it
 function getInfo() {
     if (theatreID != undefined) {
         $("#data").hide();
@@ -97,8 +94,7 @@ function getInfo() {
                 }
         table1 += "</tbody></table>";
         $("#data").html(table1);
-    //TÄÄ ON SE JOKA TOIMII    $("#data").fadeIn(800);
-        $("#data").slideDown(1500);
+        $("#data").slideDown(2200);
 
             }
             $("#movietheatre").val("");
